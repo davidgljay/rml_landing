@@ -58,7 +58,7 @@ h1 {
 
 #mainNav {
 
-  background-color: rgba($theme-primary, .5)
+  background-color: rgba(0,0,0, .25)
 }
 
 #background-video {
@@ -80,12 +80,32 @@ h1 {
   position: absolute;
 }
 
+.navbar-default.affix .navbar-header .navbar-brand{
+  color: #fff;
+}
+
+.navbar-default.affix .nav > li > a {
+  color: #fff;
+}
+
 .text-white {
   color: #fff;
 }
 
 .text-light-grey {
   color: $grey-color-light;
+}
+
+.text-green {
+  color: $theme-green;
+}
+
+.text-red {
+  color: darkred;
+}
+
+.text-dark {
+  color: $theme-dark;
 }
 
 .subtitle {
