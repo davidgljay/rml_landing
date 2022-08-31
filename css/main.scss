@@ -42,3 +42,34 @@ $theme-dark: #222;
         "mixins",
         "base"
 ;
+
+// Custom CSS
+
+header {
+  background-image: none;
+  height: 100vh;
+}
+
+#mainNav {
+
+  background-color: rgba($theme-primary, .5)
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  overflow: hidden;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+#video-overlay {
+  background: rgba(0,0,0,0.5);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
