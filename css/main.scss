@@ -35,7 +35,8 @@ $grey-color-dark:  darken($grey-color, 25%);
 
 // variables.less
 $theme-primary: #247ba0;
-$theme-dark: #222;
+$theme-dark: #390040;
+$theme-green: #8a9b68;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -48,6 +49,11 @@ $theme-dark: #222;
 header {
   background-image: none;
   height: 100vh;
+  color: $theme-green;
+}
+
+h1 {
+  font-size: 50px;
 }
 
 #mainNav {
@@ -72,4 +78,16 @@ header {
   width: 100vw;
   height: 100vh;
   position: absolute;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-light-grey {
+  color: $grey-color-light;
+}
+
+.subtitle {
+  font-size: 22px;
 }
