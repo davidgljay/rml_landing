@@ -154,3 +154,34 @@ hr.primary {
 .svg_icon_md {
   height: 56px;
 }
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.circle-crop {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 2px solid white;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    overflow:hidden;
+}
+.headshot {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+}
