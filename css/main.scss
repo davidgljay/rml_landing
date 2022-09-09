@@ -13,7 +13,7 @@
 
 $text-color:       #111;
 $background-color: #f7f7f3;
-$brand-color:      #2a7ae2;
+$brand-color:      rgb(31, 55, 10);
 
 $grey-color:       #50514f;
 $grey-color-light: lighten($grey-color, 40%);
@@ -34,9 +34,11 @@ $grey-color-dark:  darken($grey-color, 25%);
 // }
 
 // variables.less
-$theme-primary: #247ba0;
+$theme-primary: rgb(31, 55, 10);
 $theme-dark: #390040;
 $theme-green: rgb(31, 55, 10);
+$theme-blue: #247ba0;
+
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -53,7 +55,24 @@ header {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 45px;
+  font-weight: 500;
+}
+
+h2 {
+  font-weight: 100;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  font-weight: 400;
 }
 
 #mainNav {
@@ -88,6 +107,10 @@ h1 {
   color: #fff;
 }
 
+hr.primary {
+  border-color: $theme-primary;
+}
+
 .text-white {
   color: #fff;
 }
@@ -102,6 +125,10 @@ h1 {
 
 .text-red {
   color: darkred;
+}
+
+.text-blue {
+  color: $theme-blue;
 }
 
 .text-dark {
