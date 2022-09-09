@@ -36,7 +36,7 @@ $grey-color-dark:  darken($grey-color, 25%);
 // variables.less
 $theme-primary: #247ba0;
 $theme-dark: #390040;
-$theme-green: #8a9b68;
+$theme-green: rgb(31, 55, 10);
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
@@ -58,7 +58,7 @@ h1 {
 
 #mainNav {
 
-  background-color: rgba(0,0,0, .25)
+  background-color: rgba($theme-green, .25)
 }
 
 #background-video {
