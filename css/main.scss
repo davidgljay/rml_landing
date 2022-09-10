@@ -107,6 +107,20 @@ body {
   color: #fff;
 }
 
+.navbar-default .nav > li > a {
+  color: $grey-color-light;
+}
+
+.navbar-default .nav > li > a:hover {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+    .navbar-brand {
+        font-size: 14px;
+    }
+}
+
 hr.primary {
   border-color: $theme-primary;
 }
