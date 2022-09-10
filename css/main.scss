@@ -155,20 +155,6 @@ hr.primary {
   height: 56px;
 }
 
-.mt-60 {
-  margin-top: 60px;
-}
-
-.mb-40 {
-  margin-bottom: 40px;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-
 .circle-crop {
     width: 100px;
     height: 100px;
@@ -192,4 +178,33 @@ hr.primary {
   font-weight: 100;
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
