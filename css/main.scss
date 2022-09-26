@@ -99,6 +99,14 @@ body {
   position: absolute;
 }
 
+#research-header {
+  background-image: url("/img/research.jpg");
+  width: 100vw;
+  height: 55vh;
+  background-size: cover;
+  background-position-y: bottom;
+}
+
 .navbar-default.affix .navbar-header .navbar-brand{
   color: #fff;
 }
@@ -116,6 +124,11 @@ body {
 }
 
 @media (max-width: 800px) {
+
+    #research-header {
+      height: 30vh;
+    }
+
     .navbar-brand {
         font-size: 14px;
     }
