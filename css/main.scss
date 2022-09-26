@@ -107,6 +107,19 @@ body {
   background-position-y: bottom;
 }
 
+p {
+  color: lighten($text-color, 40%);
+}
+
+section {
+  padding: 50px;
+}
+
+section .row {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
 .navbar-default.affix .navbar-header .navbar-brand{
   color: #fff;
 }
