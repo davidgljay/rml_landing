@@ -203,6 +203,15 @@ hr.primary {
   height: 56px;
 }
 
+.iframeContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.iframe {
+  border: none;
+}
+
 .circle-crop {
     width: 100px;
     height: 100px;
