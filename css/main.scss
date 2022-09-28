@@ -39,6 +39,7 @@ $theme-dark: rgb(31, 55, 10);
 $theme-light: #708c57;
 $theme-green: rgb(31, 55, 10);
 $theme-blue: #247ba0;
+$theme-purple: #390040;
 
 
 // Import partials from `sass_dir` (defaults to `_sass`)
@@ -203,6 +204,10 @@ hr.primary {
 
 .text-dark {
   color: $theme-dark;
+}
+
+.text-purple {
+  color: $theme-purple;
 }
 
 .fill-green {
