@@ -159,7 +159,27 @@ section .row {
   color: $theme-light;
 }
 
+#relstructure {
+  width: 100%;
+  height: 350px;
+}
+
+#relprediction {
+  width: 100%;
+  height: 480px;
+}
+
+
 @media (max-width: 800px) {
+
+
+    #relstructure {
+      height: 600px;
+    }
+
+    #relprediction {
+      height: 810px;
+    }
 
     #research-header {
       height: 30vh;
