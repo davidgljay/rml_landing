@@ -13,7 +13,7 @@
             type: 'post',
             data:$('#contactForm').serialize(),
             success:function(){
-                $('#contactForm').hide()
+                $('#contactArea').hide()
                 $('#contactThanks').show()
                 console.log('success')
             }
