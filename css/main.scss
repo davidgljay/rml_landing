@@ -211,6 +211,13 @@ section .row {
       height: 30vh;
     }
 
+    #book {
+      img {
+        max-width: 200px;
+        margin-bottom: 40px;
+      }
+    }
+
     .navbar-brand {
         font-size: 14px;
     }
