@@ -29,11 +29,19 @@
 
     // Fit Text Plugin for Main Header
     $("h1").fitText(
-        1.7, {
-            minFontSize: '15px',
-            maxFontSize: '55px'
+        1, {
+            minFontSize: '30px',
+            maxFontSize: '50px'
         }
     );
+
+    $("header h2").fitText(
+        1.7, {
+            minFontSize: '15px',
+            maxFontSize: '30px'
+        }
+    );
+
 
     // Offset for Main Navigation
     $('#mainNav').affix({

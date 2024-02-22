@@ -14,6 +14,7 @@
 $text-color:       #111;
 $background-color: #f7f7f3;
 $brand-color:      rgb(31, 55, 10);
+$light-green:      #4c8817;
 
 $grey-color:       #50514f;
 $grey-color-light: lighten($grey-color, 40%);
@@ -54,11 +55,33 @@ header {
   background-image: none;
   height: 100vh;
   color: $theme-green;
+  min-height: 70%;
+}
+
+.header-content-inner {
+  max-width: 800px;
+  margin-top: 100px;
+  text-align: right;
+  display:flex;
+  justify-content: center;
+  align-items: end;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  img {
+    max-width: 300px;
+  }
+  h1 {
+    text-align: right;
+  }
+}
+
+header .header-content .header-content-inner h1 {
+  text-transform: none;
 }
 
 
 h1 {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: 500;
 }
 
@@ -80,26 +103,7 @@ body {
 
 #mainNav {
 
-  background-color: rgba($theme-green, .25)
-}
-
-#background-video {
-  width: 100vw;
-  height: 100vh;
-  object-fit: cover;
-  overflow: hidden;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-#video-overlay {
-  background: rgba(0,0,0,0.5);
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
+  background-color: rgba($theme-green, .75)
 }
 
 #research-header {
@@ -172,9 +176,24 @@ section .row {
 
 @media (max-width: 800px) {
 
-
+    header {
+      height: auto;
+      .header-content {
+        padding: 20px 15px 20px 15px;
+        .header-content-inner {
+          // margin-top: 50px;
+          img {
+            max-width: 200px;
+          }
+          h1 {
+            padding-top: 30px;
+          }
+        }
+      }
+    }
+    
     #relstructure {
-      height: 600px;
+      height: 600px;  
     }
 
     #relprediction {
@@ -187,10 +206,6 @@ section .row {
 
     .navbar-brand {
         font-size: 14px;
-    }
-
-    .header-content {
-      top: -70vh;
     }
 
     .navbar-default .navbar-header .navbar-brand {
@@ -210,8 +225,16 @@ hr.primary {
   color: $grey-color-light;
 }
 
+.text-grey {
+  color: $grey-color-dark;
+}
+
 .text-green {
   color: $theme-green;
+}
+
+.text-light-green {
+  color: $light-green;
 }
 
 .text-red {
@@ -232,6 +255,10 @@ hr.primary {
 
 .fill-green {
   fill: $theme-green;
+}
+
+.light-bold {
+  font-weight: 500;
 }
 
 .subtitle {
