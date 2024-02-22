@@ -103,7 +103,7 @@ body {
 
 #mainNav {
 
-  background-color: rgba($theme-green, .75)
+  background-color: rgba($theme-green, .9)
 }
 
 #research-header {
@@ -124,6 +124,7 @@ body {
 
 p {
   color: lighten($text-color, 40%);
+  font-weight: 300;
 }
 
 section {
