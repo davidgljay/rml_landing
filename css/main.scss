@@ -136,6 +136,12 @@ section .row {
   margin-bottom: 25px;
 }
 
+.navbar-brand > img {
+  display: inline;
+  width: 20px;
+  margin-right: 5px;
+}
+
 .navbar-right {
   margin-right: 20px;
 }
@@ -211,6 +217,13 @@ section .row {
       height: 30vh;
     }
 
+    #story {
+      img {
+        max-width: 250px;
+        margin-bottom: 40px;
+      }
+    }
+
     #book {
       img {
         max-width: 200px;
@@ -220,6 +233,9 @@ section .row {
 
     .navbar-brand {
         font-size: 14px;
+        img {
+          display: none;
+        }
     }
 
     .navbar-default .navbar-header .navbar-brand {
