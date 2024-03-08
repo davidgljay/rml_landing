@@ -87,6 +87,7 @@ h1 {
 
 h2 {
   font-weight: 300;
+  margin-top: 40px;
 }
 
 h3 {
@@ -187,7 +188,7 @@ section .row {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 1200px) {
 
     header {
       height: auto;
@@ -240,6 +241,10 @@ section .row {
 
     .navbar-default .navbar-header .navbar-brand {
       color: #fff;
+    }
+
+    .section-heading {
+      margin-top: 30px;
     }
 }
 
@@ -295,6 +300,10 @@ hr.primary {
   font-size: 22px;
 }
 
+.subpage_header_img {
+  max-width: 250px;
+}
+
 .bg-green {
   background-color: $theme-green;
 }
@@ -315,6 +324,18 @@ hr.primary {
 
 .iframe {
   border: none;
+}
+
+.context-heading > h3 {
+  margin-top: 5px;
+}
+
+.example {
+  margin-left: 30px;
+  margin-right: 30px;
+  h4 {
+    margin-top: 5px;  
+  }
 }
 
 .fig-text {
