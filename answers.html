@@ -4,15 +4,19 @@
     const queryParams = new URLSearchParams(window.location.search);
 
     // Get the values of the query parameters
-    const param1 = queryParams.get('email');
-    const param2 = queryParams.get('answer');
+    const email = queryParams.get('email');
+    const answer = queryParams.get('answer');
 
     // Construct the URL to send the query parameters
-    const sendUrl = `https://hooks.zapier.com/hooks/catch/14500435/3p5fn23/?email=${param1}&param2=${param2}`;
+    const sendUrl = `https://hooks.zapier.com/hooks/catch/14500435/3p5fn23/?email=${param1}&answer=${param2}`;
 
     fetch(sendUrl)
         .then(response => {
-            window.location.href = 'https://tally.so/r/3jyBA4';
+            if (answer == 'yes') {
+                window.location.href = 'https://tally.so/r/3jyqV6?email=' + email;
+            } else {
+                window.location.href = 'https://tally.so/r/3ly985?email=' + email;
+            }
         })
         .catch(error => {
             console.error('Error:', error);
