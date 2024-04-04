@@ -1,3 +1,4 @@
+<html>
 <script>
     // Get the query parameters from the current URL
     const queryParams = new URLSearchParams(window.location.search);
@@ -11,12 +12,11 @@
 
     fetch(sendUrl)
         .then(response => {
-            // Handle the response here
+            window.location.href = 'https://tally.so/r/3jyBA4';
         })
         .catch(error => {
-            // Handle any errors here
+            console.error('Error:', error);
         });
 
-    // Redirect to the third URL
-    window.location.href = 'https://tally.so/r/3jyBA4';
 </script>
+</html>
