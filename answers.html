@@ -8,7 +8,7 @@
     const answer = queryParams.get('answer');
 
     // Construct the URL to send the query parameters
-    const sendUrl = `https://hooks.zapier.com/hooks/catch/14500435/3p5fn23/?email=${param1}&answer=${param2}`;
+    const sendUrl = `https://hooks.zapier.com/hooks/catch/14500435/3p5fn23/?email=${email}&answer=${answer}`;
 
     fetch(sendUrl)
         .then(response => {
