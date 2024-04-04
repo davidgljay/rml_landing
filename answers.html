@@ -1,0 +1,22 @@
+<script>
+    // Get the query parameters from the current URL
+    const queryParams = new URLSearchParams(window.location.search);
+
+    // Get the values of the query parameters
+    const param1 = queryParams.get('email');
+    const param2 = queryParams.get('answer');
+
+    // Construct the URL to send the query parameters
+    const sendUrl = `https://hooks.zapier.com/hooks/catch/14500435/3p5fn23/?email=${param1}&param2=${param2}`;
+
+    fetch(sendUrl)
+        .then(response => {
+            // Handle the response here
+        })
+        .catch(error => {
+            // Handle any errors here
+        });
+
+    // Redirect to the third URL
+    window.location.href = 'https://tally.so/r/3jyBA4';
+</script>
