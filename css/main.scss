@@ -236,6 +236,17 @@ section .row {
   }
 }
 
+#story {
+  img {
+    width: 350px;
+    height: 350px;
+    max-width: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 25%;
+  }
+}
+
 @media (max-width: 768px) {
 
   header {
@@ -292,6 +303,8 @@ section .row {
 
     #story {
       img {
+        width: 250px;
+        height: 250px;
         max-width: 250px;
         margin-bottom: 40px;
       }
