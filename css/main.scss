@@ -199,6 +199,12 @@ section .row {
   color: $theme-light;
 }
 
+.navbar-default .dropdown-toggle.active,
+.navbar-default .dropdown-item.active,
+.navbar-default .mobile-menu a.active {
+  color: $theme-light;
+}
+
 .dropdown-container {
   padding: 20px 20px 5px 20px;
   min-width: 200px;
@@ -256,6 +262,28 @@ section .row {
     border-radius: 20%;
     object-fit: cover;
     object-position: center 25%;
+  }
+}
+
+#beliefs {
+  .row {
+    margin-bottom: 50px;
+  }
+  img {
+    width: 250px;
+    height: 250px;
+    max-width: 250px;
+    border-radius: 24px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+  }
+
+  img.seedling {
+    position: relative;
+    right: -20px;
   }
 }
 
@@ -329,6 +357,10 @@ section .row {
       }
     }
 
+    #beliefs p, #beliefs h3, #whatwedo p, #whatwedo h3 {
+      text-align: center;
+    }
+
     .navbar-brand {
         font-size: 14px;
         img {
@@ -347,6 +379,10 @@ section .row {
 
 hr.primary {
   border-color: $theme-primary;
+}
+
+hr.white {
+  border-color: #fff;
 }
 
 .text-white {
