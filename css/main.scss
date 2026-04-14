@@ -442,6 +442,12 @@ hr.white {
 
 .bg-green {
   background-color: $theme-green;
+
+  ::selection {
+    background: #fff;
+    color: $theme-primary; 
+  }
+
 }
 
 .svg_icon {
