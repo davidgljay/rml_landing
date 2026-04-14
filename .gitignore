@@ -3,9 +3,5 @@ _site/
 .jekyll-cache/
 .bundle/
 _site/
-.github/
-.jekyll-metadata
-.jekyll-cache/
-.sass-cache/
 .DS_Store
 img/.DS_Store
