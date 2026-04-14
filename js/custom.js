@@ -1,10 +1,33 @@
 (function($) {
     "use strict"; // Start of use strict
 
-	const path = window.location.pathname;
-    const link = document.querySelector( `.navbar-default li a[href="${path}"]` );
+    const path = window.location.pathname.replace(/\/$/, "") || "/";
+    const links = document.querySelectorAll(".navbar-default a[href]");
+    let activeLink = null;
 
-    $(link).addClass('active');
+    for (const link of links) {
+        const href = link.getAttribute("href");
+        if (!href || href === "#" || href.startsWith("http")) {
+            continue;
+        }
+
+        const normalizedHref = href.split("#")[0].replace(/\/$/, "") || "/";
+        if (normalizedHref === path) {
+            activeLink = link;
+            break;
+        }
+    }
+
+    if (activeLink) {
+        activeLink.classList.add("active");
+        const navItem = activeLink.closest(".nav-item.dropdown");
+        if (navItem) {
+            const toggle = navItem.querySelector(".dropdown-toggle");
+            if (toggle) {
+                toggle.classList.add("active");
+            }
+        }
+    }
 
     $('#contactForm').submit(function(e){
         e.preventDefault();
