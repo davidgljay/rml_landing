@@ -449,6 +449,12 @@ hr.white {
     color: $theme-primary; 
   }
 
+  a {
+    color: $theme-light;
+    font-weight: 400;
+
+  }
+
 }
 
 .svg_icon {
