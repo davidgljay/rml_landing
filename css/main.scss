@@ -460,6 +460,17 @@ hr.primary {
     width: 100%;
 }
 
+.wrap-reverse {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.btn-big {
+  font-size: 22px;
+  font-weight: 500;
+}
+
 .footer {
   font-size:11px;
   color: $grey-color-light;
