@@ -288,6 +288,18 @@ section .row {
   }
 }
 
+.arrow-wrapper {
+  display: flex;
+  justify-content: center;   /* horizontally center */
+  align-items: center;       /* vertically center (optional) */
+}
+
+.scrolldown-arrow {
+  width: 70px;
+  position: absolute;
+  top: 85vh;
+}
+
 @media (max-width: 768px) {
 
   header {
@@ -322,6 +334,9 @@ section .row {
   }
   .section-heading {
     margin-top: 30px;
+  }
+  .scrolldown-arrow {
+    display: none;
   }
 }
 
@@ -381,6 +396,8 @@ section .row {
     .section-heading {
       margin-top: 30px;
     }
+
+
 }
 
 hr.primary {
