@@ -32,7 +32,7 @@
     $('#contactForm').submit(function(e){
         e.preventDefault();
         $.ajax({
-            url: 'https://hooks.zapier.com/hooks/catch/14500435/36xu44q/',
+            url: 'https://gettoolkit.app/webhook/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..9lLhj4hbJLoxkcG8.K-nkGoLjbuy59mQSiupxlMqGHMfFKhpNAzFjfesj0SpBJdZe2W6ieuhVfhFWjHfSj3mWXH8fl5JMhQJNHqeQfGwOC_oLXu1s5Ek.sBhVr9eWOZheBNoWs9TtIQ',
             type: 'post',
             data:$('#contactForm').serialize(),
             success:function(){
@@ -46,7 +46,7 @@
     $('#newsletterForm').submit(function(e){
         e.preventDefault();
         $.ajax({
-            url: 'https://hooks.zapier.com/hooks/catch/14500435/36ehu98/',
+            url: 'https://gettoolkit.app/webhook/eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIn0..9lLhj4hbJLoxkcG8.K-nkGoLjbuy59mQSiupxlMqGHMfFKhpNAzFjfesj0SpBJdZe2W6ieuhVfhFWjHfSj3mWXH8fl5JMhQJNHqeQfGwOC_oLXu1s5Ek.sBhVr9eWOZheBNoWs9TtIQ',
             type: 'post',
             data:$('#newsletterForm').serialize(),
             success:function(){
