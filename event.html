@@ -1,0 +1,84 @@
+---
+layout: page
+title: Comic Relief LA Neighborhood Festival
+permalink: /event
+---
+<div id="eventArea">
+  <h1>Comic Relief LA: Neighborhood Festival</h1>
+  <p class="lead">Saturday, September 19, 2026 &middot; 11 AM &ndash; 3 PM PT<br>
+  Paramount Pictures Studio, 5353 Melrose Avenue (Bronson Gate), Los Angeles, CA 90038</p>
+  <p>A free community event with live comedy, packing care kits for local kids and teens, LEGO building, yard games, nonprofit partners, career development resources, and complimentary lunch. Free admission; organized by Comic Relief. Fill out the form below to sign up.</p>
+  <p class="small text-muted">Official event page and tickets: <a href="https://www.eventbrite.com/e/comic-relief-la-neighborhood-festival-tickets-1997859898738" target="_blank" rel="noopener">Eventbrite</a>.</p>
+
+  <form id="eventForm">
+    <div class="form-group">
+      <div class="row">
+        <div class="col-sm-6 mb-20">
+          <input type="text" class="form-control" name="firstname" placeholder="First name" required autocomplete="given-name">
+        </div>
+        <div class="col-sm-6 mb-20">
+          <input type="text" class="form-control" name="lastname" placeholder="Last name" required autocomplete="family-name">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 mb-20">
+          <input type="email" class="form-control" name="email" placeholder="Email" required autocomplete="email">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12 mb-20">
+          <input type="tel" class="form-control" id="eventPhone" name="phone" placeholder="Mobile phone (required only for text surveys)" autocomplete="tel">
+        </div>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="sms_consent" id="smsConsent" value="yes">
+          I agree to receive text messages from Relationality Lab inviting me to take part in a survey after the September 19 event. Consent is optional and not required to attend. Message frequency varies (expect a small number of messages); message and data rates may apply. Reply STOP to cancel or HELP for help. See our <a href="/privacy_policy" target="_blank">Privacy Policy</a> and <a href="/terms_of_service" target="_blank">Terms of Service</a>.
+        </label>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" name="newsletter" value="yes">
+          Also subscribe me to the newsletter &amp; future events (optional).
+        </label>
+      </div>
+    </div>
+    <p id="eventError" class="text-danger" style="display:none"></p>
+    <button type="submit" class="btn btn-primary" data-umami-event="event-signup-click">Sign Me Up</button>
+    <p class="small text-muted mt-20">By signing up you agree to our <a href="/terms_of_service">Terms of Service</a> and <a href="/privacy_policy">Privacy Policy</a>.</p>
+  </form>
+</div>
+
+<div id="eventThanks" style="display:none">
+  <h1>You're signed up!</h1>
+  <p class="lead">Thanks &mdash; we'll email you the details for the festival on September 19.</p>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var $ = window.jQuery;
+    $('#eventForm').submit(function (e) {
+      e.preventDefault();
+      var consent = $('#smsConsent').is(':checked');
+      var phone = $('#eventPhone').val().trim();
+      var $err = $('#eventError').hide();
+      if (consent && phone.replace(/\D/g, '').length < 10) {
+        $err.text('Please enter a valid mobile number to receive text surveys, or uncheck the text message box.').show();
+        return;
+      }
+      var form = $(this).serializeArray().reduce(function (o, i) { o[i.name] = i.value; return o; }, {});
+      form.event = 'Comic Relief LA: Neighborhood Festival, September 19, 2026';
+      form.sms_consent = consent ? 'yes' : 'no';
+      form.sms_consent_at = consent ? new Date().toISOString() : '';
+      form.sms_consent_text = consent ? $('#smsConsent').closest('label').text().replace(/\s+/g, ' ').trim() : '';
+      $.ajax({
+        url: 'https://faas-nyc1-2ef2e6cc.doserverless.co/api/v1/web/fn-8e8c4968-55c0-47b4-a2c2-0a18affc3f51/emailer/send',
+        type: 'post',
+        contentType: 'application/json',
+        data: JSON.stringify({ form: form, subject: 'New Event Signup (Comic Relief LA, Sept 19) on RLab' }),
+        success: function () { $('#eventArea').hide(); $('#eventThanks').show(); },
+        error: function () { $err.text('Something went wrong. Please try again.').show(); }
+      });
+    });
+  });
+</script>

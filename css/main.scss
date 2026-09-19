@@ -582,3 +582,13 @@ hr.white {
   margin-left: auto;
   margin-right: auto;
 }
+
+.legal-page {
+  padding-top: 100px;
+  padding-bottom: 40px;
+
+  h1 { margin-bottom: 5px; }
+  h2 { font-size: 22px; margin-top: 30px; }
+  p, li { font-size: 16px; line-height: 1.6; }
+  .checkbox label { font-size: 14px; line-height: 1.5; }
+}
